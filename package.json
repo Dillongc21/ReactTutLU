@@ -1,0 +1,28 @@
+{
+  "name": "react-tut-lu",
+  "version": "1.0.0",
+  "description": "React Tutorial by LevelUpTuts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dillongc21/ReactTutLU.git"
+  },
+  "author": "Dillon Christensen & LevelUpTuts",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dillongc21/ReactTutLU/issues"
+  },
+  "homepage": "https://github.com/Dillongc21/ReactTutLU#readme",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "webpack": "^3.5.5"
+  }
+}
