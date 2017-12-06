@@ -1,34 +1,31 @@
 import React from 'react';
-import {render} from 'react-dom';
-import ContactsList from './ContactsList'
+import ReactDom from 'react-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
-let contacts = [{
-  id: 1,
-  name: 'Dillon',
-  phone: '555 333 5555'
-}, {
-  id: 2,
-  name: 'Brian',
-  phone: '444 333 5555'
-}, {
-  id: 3,
-  name: 'Alice',
-  phone: '555 333 7777'
-}, {
-  id: 4,
-  name: 'Hank',
-  phone: '111 333 5555'
-}]
+const PrimaryLayout = () => (
+  <div className="primary-layout">
+    <header>
+      Our React Router 4 App
+    </header>
+    <main>
+      <Switch>
+        <Route path="/" exact />
+        <Route path="/" component={HomePage} />
+        <Route path="/users" component={UsersPage} />
+      </Switch>
+    </main>
+  </div>
+)
 
-class App extends React.Component {
-  render () {
-    return (
-      <div>
-        <h1>Contacts List</h1>
-        <ContactsList contacts={this.props.contacts} />
-      </div>
-    )
-  }
-}
+const HomePage =() => <div>Home Page</div>
+const UsersPage = () => <div>Users Page</div>
 
-render(<App contacts={contacts} />, document.getElementById('app'));
+const App = () => (
+  <BrowserRouter>
+    <PrimaryLayout />
+  </BrowserRouter>
+)
+
+const app = document.getElementById('app')
+
+ReactDom.render(<App />, app);
